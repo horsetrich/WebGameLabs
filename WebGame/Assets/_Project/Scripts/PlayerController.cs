@@ -4,7 +4,7 @@ namespace Platformer397
 {
 
     [RequireComponent(typeof(Rigidbody))]
-    public class PlayerController : MonoBehaviour
+    public class PlayerController : Subject
     {
 
         [SerializeField] private InputReader input;
@@ -26,6 +26,7 @@ namespace Platformer397
         void Start()
         {
             input.EnablePlayerActions();
+            NotifyObservers();
         }
 
         private void OnEnable()
