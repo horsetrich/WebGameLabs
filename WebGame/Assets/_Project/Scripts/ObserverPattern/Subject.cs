@@ -10,7 +10,6 @@ namespace Platformer397
 
         public void AddObserver(IObserver observer) => observers.Add(observer);
 
-        // Start is called once before the first execution of Update after the MonoBehaviour is created
         public void RemoveObserver(IObserver observer) => observers.Remove(observer);
 
         public void NotifyObservers()
